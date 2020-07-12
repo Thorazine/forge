@@ -1,0 +1,29 @@
+{
+    "name": "thorazine/forge",
+    "description": "Laravel Forge API",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Matthijs Openneer",
+            "email": "noreply@matthijs.openneer.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Thorazine\\Forge\\": "src/"
+        }
+    },
+    "require": {
+        "guzzlehttp/guzzle": "^6.0"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Thorazine\\Forge\\ForgeServiceProvider"
+            ],
+            "aliases": {
+                "Forge": "Thorazine\\Forge\\Facades\\ForgeFacade"
+            }
+        }
+    }
+}
