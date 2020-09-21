@@ -37,4 +37,3 @@ class ForgeServiceProvider extends ServiceProvider
         $this->mergeConfigFrom(__DIR__.'/config/forge.php', 'forge');
     }
 }
-]
