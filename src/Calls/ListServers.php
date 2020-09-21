@@ -9,4 +9,9 @@ class ListServers extends Connect
     protected $method = 'get';
     protected $path = 'servers';
 
+    public function __construct()
+    {
+        parent::__construct($this);
+    }
+
 }

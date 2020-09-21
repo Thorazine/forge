@@ -1,21 +1,14 @@
 <?php
 
-namespace Thorazine\Location\Classes\Facades;
-
-use GuzzleHttp\Exception\GuzzleException;
-use GuzzleHttp\Client;
-use Exception;
-use StdClass;
-use Request;
-use Log;
-use App;
+namespace Thorazine\Forge\Classes\Facades;
 
 class Forge
 {
-    public function get()
+    public function __call(string $name, array $arguments)
     {
-        $client = new Client;
-
-
+        $class = 'Thorazine\Forge\Calls\\'.$name;
+        if(class_exists($class)) {
+            return new $class;
+        }
     }
 }
